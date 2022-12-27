@@ -29,17 +29,11 @@ while (e < fi):
         e = e + 1
 
 
-for x in range(2,20):
-    temp = (x * e) % fi
-    print(temp)
-    if temp == 1:
-        d = x
-        break
+d = pow(e,-1,fi)
 
 
 data = int(input("Enter data to be encrytped: "))
-cipher = (data ** e) % n
+cipher = pow(data,e,n)
 print("Encrypted data is : ",cipher)
-decipher = (cipher ** d) % n
+decipher = pow(cipher,d,n)
 print("Deciphered data is : ",decipher)
-

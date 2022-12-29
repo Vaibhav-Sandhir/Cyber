@@ -1,0 +1,166 @@
+ 	 Level 1 password =  boJ9jbbUNNfktd78OOpsqOltutMc3MY1
+
+The Secure Shell Protocol (SSH) is a cryptographic network protocol for operating network services securely over an unsecured network.Its most notable applications are remote login and command-line execution.
+SSH applications are based on a client–server architecture, connecting an SSH client instance with an SSH server.SSH operates as a layered protocol suite comprising three principal hierarchical components: the transport layer provides server authentication, confidentiality, and integrity; the user authentication protocol validates the user to the server; and the connection protocol multiplexes the encrypted tunnel into multiple logical communication channels. 
+
+To use it ssh username@adrees -p portnumber
+
+du estimates file space usage
+file determines file type
+
+to open a file called -
+cat <-
+
+ 	 Bandit 2 password = rRGizSaX8Mk1RTb1CNQoXTcYZWU6lgzi
+
+If there are spaces in the file name for eg hello my
+then to access it like cat hello\ \my
+
+  	Bandit 3 password = aBZ0W5EmUfAf7kHTQeOwd8bauFJ2lAiG
+
+
+To display hidden files: ls -a
+                         dir -a
+
+  	Bandit 4 password = 2EW7BBsr6aMMoJ2HjW067dm8EgX26xNe
+
+To open multiple files at once file full address*
+                            or file ./*
+
+  	Level 5 password = lrIWWI6bB37kxfiCQZqUdOIYfr6eEeqR
+
+find -size(space)ct; not executable ! -executable
+
+ 	 Level 6 password = P4L4vucdmLnm8I7Vl7jG1ApGSfjYKqJU
+                          
+find -group bandit6 -user bandit7 -size 33c 2>/dev/null
+last part removes password denied
+
+	Level 7 password = z7WtoNQU2XfjmMtWA8u5rN4vzqu4v99S    
+	  
+To find line with particular text 
+grep -w millionth data.txt
+	
+	Level 8 password = TESKZC0XvTetK0S9xNwm25STk5iWrBvP
+
+Line of text that occurs only once
+sort data.txt | uniq -u
+uniq only filters adjacent matching lines so the files have to be sorted using sort data.txt in order for repeated lines to be together
+
+	Level 9 password = EN632PlfYiZbn3PhVK3XOGSlNInNE00t
+
+grep -E "=+" data.txt does not work because data.txt is a binay file so to read human readable strings so we use strings data.txt and then we pipe it to grep -E "=+"
+strings data.txt | grep -E "=+"
+
+	Level 10 password = G7w8LIi6J3kTb8A7j9LgrywtEUlyyp6s
+
+To decode base64 file base64 -d file.txt
+
+	Level 11 password = 6zPeziLdR2RKNdNYFNb6nVCKzphlXHBM
+
+Todecode rot13 pipe the file into tr 'A-Za-z' 'N-ZA-Mn-za-m'
+or just type the tr command and then type the text to be decoded
+
+	Level 12 password = JVNBBFSmZwKKOP0XbFXOoW8chDz5yVRv
+	
+To rename file mv old.txt new.txt	
+To make hexdump file into binary file =  xxd -r inputfile outputfile
+Check how file is compressed and decompress it accordingly
+If gzip compressed then first change file's extension to .gz
+then gzip -d filename.gz
+If bzip2 compressed then no need to change extension
+then bzip2 -d filename
+If tar compressed then change extension to .tar 
+then tar xvf filename.tar
+
+	Level 13 passsword = wbWdlBxEir4CaE8LaPhauuOo6pwRmrDw
+	
+To log in using key = ssh -i sshkey.private bandit14@localhost -p 2220
+
+	Otherwise Level 14 password = fGrHPx402xGC7U7rXKDaxiWFTOiF0ENq
+
+submiting password of current leve to port 30000 local host            netcat localhost 30000
+fGrHPx402xGC7U7rXKDaxiWFTOiF0ENq
+
+	Level 15 password = jN2kgmIXJ6fShzhT2avhotn4Zcka6tnt
+	
+For SSL encryption
+openssl s_client -connect localhost:30001
+put password in read R block 
+
+	Level 16 password = JQttfApK4SeyHwDlI9SXGR50qclOAil1
+	
+To scan all the ports 
+nmap -sV -p 31000-32000 localhost
+Then to connect the port 31790 through ssl
+Then save the key using nano into a file in tmp directory then ssh -i
+
+	Level 17 password = VwOSWtCA7lRKkTfbr2IDh6awj9RNZM5e
+
+--from-file=FILE1
+compare FILE1 to all operands; FILE1 can be a directory
+diff --normal --from-file=passwords.new passwords.old   .new written first so will display its content first          
+
+        Level 18 password =  hga5tuuCLF6fFzUpnagiMN8ssu9LFrdg
+        
+As you cannot log into ssh you can use ssh property which allows remote execution of commands byd adding commands after the ssh expression
+so ssh bandit18@bandit.labs.overthewire.org -p 2220 cat readme
+
+	Level 19 password = awhqfNnAbc1naukrpqDYcF95h7HoMTrC
+
+after doing ls -al you can see bandit20-do owner is bandit20 and only the user bandit19 can execute so we run command as bandit 20 because it has read permission on that
+./bandit20-do cat /etc/bandit_pass/bandit20
+
+	Level 20 password = VxCazJaVykI6W36BkBU0mJTCM8rR95XT
+
+We need to make another connection to the port on the given host. It helps to read and write data across network connections.To we cand input into this new connection and get output form it.Do it in bandit 20 only as it is the local host
+nc -lvp 8888 //l is for listen v is for verbose and p is for port
+then establish connection from other terminal through ./suconnect 
+ 	
+ 	Level 21 password = NvEJF7oVjkddltPSrdKEFOllh9V1IBcq
+
+inside /etc/cron.d we can see files as we want to goto level 22 we will see cronjob_bandit22 and we cat it we see five stars then /usr/bin/cronjob_bandit22.sh means after every minute it is executing the sheelscript cronjob_bandit22.sh
+so we will see the shellscript to see what is exactly happening
+it putting the password in a tmp file so cat tha
+
+	Level 22 passworqd = WdDozAdTM2z9DiFEQ2mGlwngMfj4EZff
+	
+Repeat the same steps as above and open shell script file and in th script whoami will be bandit 23 bc it is running as bandit 23 and then copy the command just replace myname as bandit 23 and proceed
+
+	Level 23 password = QYw0Y2aiA672PsMmh9puTQuhoz8SyR2G
+
+The shell script in this case executes and deletes all files in the folder ‘/var/spool/bandit24’. This is the case because it is run as bandit24 user, so the variable ‘myname’ contains the value ‘bandit24’. The for loop goes through the files. The first if statement makes sure the directories ‘.’ and ‘..’, which are representing the current and previous folders, are ignored. Inside the if statement is the code to execute a script, but only if the owner is bandit23. Then the file will be deleted.So we make a script to store password abd then send it to /var/spool/bandit24/foo for execution
+For creation you need to go into tmp 
+
+	Level 24 password = VAfGXJ1PBSsPSnvsjI8p759leLZ9GGar
+
+To start shellscript #!/bin/bash 
+Then in shellscript  
+#!/bin/bash
+for i in {0000..9999}
+do 
+	echo "UoMYTrfrBFHyQXmg6gzctqAwOmw1IohZ $i"
+done
+The put this output into another file combinations.txt by ./bruteforcescript.sh > combinations.txt
+and as in question you can see port 30002 is already listening you straight give 
+nc localhost 30002 < combinations.txt
+
+	Level 25 password = p7TaowMYrmu23Ol8hiZh9UvD0O9hpx8d
+
+	
+	
+
+
+
+	
+	
+
+ 
+	
+
+	
+	
+
+                            
+ 
+                                                     

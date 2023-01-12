@@ -1,0 +1,2 @@
+The language being used is G-code which is the most common CNC language. The codes given
+are cordiantes which will be put into a G-code viewer.In NC viewer

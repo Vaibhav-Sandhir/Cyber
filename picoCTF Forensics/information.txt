@@ -1,0 +1,6 @@
+To know the data of the image we will use exiftool and then base64 decode to obatain the flag from license
+
+cmd: exiftool cat.jpg
+     echo "cGljb0NURnt0aGVfbTN0YWRhdGFfMXNfbW9kaWZpZWR9" >> enc.txt
+     base64 --decode enc.txt 
+

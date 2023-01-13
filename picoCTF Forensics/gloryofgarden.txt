@@ -1,0 +1,3 @@
+in the hexedit of the image at the bottom you can find the flag,
+but better way to find it will be to 
+    strings garden.jpg | grep pico

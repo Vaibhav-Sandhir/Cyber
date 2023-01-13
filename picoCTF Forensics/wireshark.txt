@@ -1,0 +1,8 @@
+The file is of the format pcapng which stands for packet capture next generation.
+It conatains a dump of data packets captured over the netwroks.
+File opened in wireshark.
+Statistics -> Protocol Hierarch -> then select text-line data as a filter -> follow HTTP stream of text/html
+we get cvpbPGS{c33xno00_1_f33_h_qrnqorrs}
+we can assume picoCTF = cvpbPGS therefore this is rot13 encoded
+cmd: echo 'cvpbPGS{c33xno00_1_f33_h_qrnqorrs}' | rot13
+

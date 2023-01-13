@@ -1,0 +1,15 @@
+binwalk is used to find out if an image has embedded hiddlen files inside or some code
+Then use unzip to decompress an image and this process is repeated till ultimately flag.txt is revealed.
+
+cmd: binwalk dolls.jpg
+     unzip dolls.jpg
+     cd base_images
+     binwalk 2_c.jpg
+     unzip 2_c.jpg
+     cd base_images
+     binwalk 3_c.jpg
+     unzip 3_c.jpg
+     cd base_images
+     binwalk 4_c.jpg
+     unzip 4_c.jpg
+     cat flag.txt

@@ -1,3 +1,7 @@
 After finding out that the image is an BMP file. Compare it with a normal BMP file which can be opened and change
 the first row of the tunnelvision according to the normal file. After that the image can be opened but not all of it is 
 visible so to increase the height change the value in 2nd row 8th column
+
+cmd: exiftool tunn3l_v1s10n  // To find out the format of the image
+     hexedit tunn3l_v1s10n    // Hexeditor
+     

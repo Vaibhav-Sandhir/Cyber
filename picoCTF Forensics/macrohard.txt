@@ -1,0 +1,18 @@
+Visual Basic Macro code is malicious code emebedded in microsoft suite documents.
+To detect tha macro code use: 
+cmd: olevba Forensics\ is\ fun.pptm
+output gives no suspicious code and says flag isn't here so we have to change approach
+
+cmd: binwalk Forensics\ is\ fun.pptm 
+We find out it is compressed, actually all microsoft suite files are compressed
+
+cmd: binwalk -e Forensics\ is\ fun.pptm  // -e is for extract. This is better as it auto makes a folder
+cd _Forensics\ is\ fun.pptm.extracted 
+cmd: tree         // easily see all files, and see a hidden file
+
+In hidden file: Z m x h Z z o g c G l j b 0 N U R n t E M W R f d V 9 r b j B 3 X 3 B w d H N f c l 9 6 M X A 1 f Q  
+To remove white spaces 
+cat hidden | sed 's/ //'     s for subsitute, / / for empty space, / replace with nothing, g global all spaces
+cat hidden | sed 's/ //g' | base64 -d  // decoding base64
+
+

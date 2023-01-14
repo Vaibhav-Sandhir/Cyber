@@ -1,0 +1,23 @@
+Open the file in wireshark and filter all the data packets according to TFTP.
+We can see that there are many files in this protocol so we will go to
+File -> Export Objects -> TFTP
+Form those files
+
+decode instruction.txt using rot 13
+echo 'GSGCQBRFAGRAPELCGBHEGENSSVPFBJRZHFGQVFTHVFRBHESYNTGENAFSRE.SVTHERBHGNJNLGBUVQRGURSYNTNAQVJVYYPURPXONPXSBEGURCYNA'
+| rot13
+It gives TFTP Does not encrypt our traffic so we must disguise our flag transfer. Figure out a way to hide the flag and
+I will check back for the plan
+
+This is a hint to look at the plan.txt
+echo 'VHFRQGURCEBTENZNAQUVQVGJVGU-QHRQVYVTRAPR.PURPXBHGGURCUBGBF' | rot13
+It gives I used the program and hid it with - due diligence. check out the photos
+
+In the program.deb file we can see a steghide which can be used for extracting
+Steghide is steganography program which hides bits of a data file in some of the least significant bits of another
+file in such a way that the existence of the data file is not visible and cannot be proven.
+So we will extract from the images using steghide
+
+cmd: steghide extract -sf picture1.bmp  // sf is for source file
+password will be DUEDILIGENCE
+Ultimately flag will be in picture3.bmp

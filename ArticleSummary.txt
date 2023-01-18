@@ -1,0 +1,141 @@
+Article Name: Research on Various Cryptography Techniques
+Authors: Yahia Alemami, Mohamad Afendee Mohamed, Saleh Atiewi
+DOI: 10.35940/ijrte.B1069.0782S319 (Digital Object Identifier)
+
+Summary:
+
+There are two fundamental techniques for encrypting data
+1.) Symmetric cryptography:
+One common key is used for encrypting the plain text and decrypting the cipher text.
+Examples - DES, 3DES, Blowfish and AES
+
+2.) Asymmetric cryptography:
+Public key is used to encrypt the plain text and Private key is used to decrypt the cipher text.
+Examples - RSA and ELGAMAL Schema
+
+Parameters used to evaluate a algortithim:
+1.) Encryption time: 
+Time measured in milliseconds taken to encrypt plain text.
+Good algorithims have low encryption time.
+
+2.) Decryption time:
+Time measured in milliseconds taken to retrieve the plain text from the cipher text.
+Good algorithims have low decryption time.
+
+3.) Memory Usage:
+Low memory usage is desirable to affect the system less.
+
+4.) Throughput:
+Attained by dividing the encoded block size by entire encode time.
+Power consumption decreases if throughput increases.
+
+Various encryption algorithims:
+
+1.) DES (Data Encryption Standard):
+It is a Symmetric key algorithim. It follows the Feistel Cipher Structure which is a block cipher.
+Block size = 64 bits
+Key size = 48 bits
+
+Working:
+There are 16 rounds of the fiestel cipher with each round having a different key.
+Round Working:
+    The plaintext is divided into two equal halves L0(32 bit) R0(32 bit).
+    R0 is passed through a round function whose output will be XOR with L0 and the output will be R1.
+    L1 is R0.
+Round function Working:
+    The right half(32 bit) is passed through an expansion box to convert it into 48 bit as the key
+    is 48 bit.
+    The key and the expanded right half is XOR and then passed onto a substituition box to convert
+    it back into 32 bit.
+Key:
+    Originally a 56 bit cipher key is used which is passed through a round key generator which generates
+    a different 48 bit key for every round.
+Modes of Operation:
+    Electronic Codebook
+    Cipher Block Chaining
+    Cipher feedback block
+    Output feedback
+    Counter method
+Problems:
+    56-bit key is too short
+
+2.) 3DES (Triple Data Encryption Standard):
+It improves on the DES in ways such as
+    i.) DES algorihtim is applied three times per round
+    ii.) Key length is 112 or 168 bit.
+    iii.) Number of rounds is 48
+Problem:
+    This encryption took a lot of time not making it viable for practical use.
+
+3.) Blowfish:
+It follows the fiestel structure with block size 64 bits. Key is anwhere between 32 to 448 bits but default is 128 bit.
+Has 16 rounds.
+Characteristics:
+    Fast and can run on less memory.
+    Key is divided into 18 subkeys each subkey being 32 bits. Stored in P array.
+    Key is also divided 4 S-boxes (128 bit key) each S-box being 32 bit.
+    S-boxes take 8 bits as input and produces a 32 bit output.
+Working:
+    Pn = Pn XOR (nth 32 bit of K array)
+    Plaintext is divided into 2 equal halves L0(32 bit) and R0(32 bit)
+    L0 XOR P1 will be R1 and passed onto a round function whose output
+    will be XOR with R0 and will become L1.
+Round Function:
+    K(31-24)    K(23-16)    K(15-8)    K(7-0) 
+       |           |           |         |
+       |           |           |         |
+      S-box 1     S-box 2     S-box 3   S-box 4  
+         ----XOR----           |         |
+              |                |         |
+              --------XOR-------         |
+                       |                 |
+                       ---------XOR-------
+                                 |
+                                 O/p
+4.) AES (Advanced Encryption Standard):
+It is a symmetric block cipher where block size is 128 bits. and Key size can be 128, 192 or 256 bits.
+Features:
+    Use Substitution and Permutation called SP networks.
+    A single key is expanded to be used in multiple rounds.
+    AES performs on byte data instead of bit data.
+    No of rounds is dependent on key lenght.
+    128 bit key --> 10 rounds
+    192 bit key --> 12 rounds
+    256 bit key --> 14 rounds
+    Everything is stored in a 4x4 matrix format called state array.
+    Each cell corresponds to one byte. 4 bytes = 1 words so each state array has 4 words.
+    Each round takes a state array as input and produces a similar output.
+    Key is expanded n + 1 times with n rounds.
+
+Round working:
+    Plaintext XOR K0 --> SubBytes --> ShiftRows --> Mix columns --> round key XOR O/p Mix columns
+                        |     Substitution     |   |Permutation|         
+SubBytes:
+    Each byte is converted to hexadecimal with 2 equal parts first part being row and second column,
+    thus resulting in a 16x16 matrix which is then passed to S-box which gives final state array.
+
+ShiftRows:
+    Used to increase complexity of the algorithim. Shift right.
+    1   2   3   4  ------>  1   2   3   4 
+    5   6   7   8           6   7   8   5
+    9   10  11  12          11  12  9   10
+    13  14  15  16          16  13  14  15
+
+MixColumns:
+    Multiply each column of the state array with a constant matrix. Resultant matrix will form the
+    new column.
+
+Vulnerabilities:
+RSA - Forced and Oracle attack
+DES - Brute Forced, Linear and differential, Cryptanalysis attack
+AES - Brute Force Attack
+3DES - Meet-in-the-middle-attack
+Blowfish - Birthday Attack
+ECC - Brute Force Attack
+
+Security and Speed:
+RSA - High, Least Secure
+DES - Low, Not secured enought
+AES - Low, Excellent Security
+3DES - Low, Excellent Security
+Blowfish - Low, Least Secured

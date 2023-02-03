@@ -1,0 +1,3 @@
+Assuming that the ebcrypted text is rot13 because the pythone script provided has errors in it so cannot
+understand it and study.txt is just a bunch of texts.
+We use https://quipqiup.com/ which will try brute force for us.

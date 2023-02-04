@@ -1,10 +1,8 @@
 list_cipher = [91,322,57,124,40,406,272,147,239,285,353,272,77,110,296,262,299,323,255,337,150,102]
-list_decipher = []
 plain_text = ""
 
 for c in list_cipher:
     num = (c % 37)
-    print(num)
     if(num == 36):
         plain_text += "_"
     elif(num >= 26 and num <= 35):

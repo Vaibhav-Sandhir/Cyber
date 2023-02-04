@@ -15,4 +15,5 @@ for c in cipher:
             num = (num+13) % 26
             num = num + 97
         plain = plain + chr(num)
+        
 print(plain)               

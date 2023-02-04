@@ -12,6 +12,5 @@ for c in list_cipher:
         char = chr(num + 65)
         plain_text += char
 
-
 print("picoCTF{" + plain_text + "}")    
                        

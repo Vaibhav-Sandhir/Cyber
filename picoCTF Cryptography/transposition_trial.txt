@@ -1,0 +1,2 @@
+I used online transposition decoder https://tholman.com/other/transposition/
+Where the key length was 3. Then rearrange the columns to make into readable format.

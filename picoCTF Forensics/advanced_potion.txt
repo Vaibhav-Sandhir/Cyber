@@ -1,0 +1,3 @@
+The given file is a corrupted file and if we do hexedit we can see the first 4 adresses are reserved for PNG.
+Download a valid PNG file and compare the two hex edit's the first line of adresses, and make changes accordingly.
+After that images becomes solid red so use stegsolve and after flipping throug options flag was seen in red plane 0

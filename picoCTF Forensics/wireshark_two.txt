@@ -1,0 +1,11 @@
+Go to Statistics -> Protocol Hierarchy -> Domain Name System - > Apply as filter
+
+8.8.8.8 is Google's adress so click on Source which will sort and we can look at the adress
+18.217.1.57 and then we can see it has queries with == therefore base 64 decoding
+
+CMD: tshark -r shark2.pcapng -T fields -e dns.qry.name -Y "dns.qry.name != ' ' && ip.dst == 18.217.1.57" | grep -oE "^[^.]*" | uniq | base64 -d
+
+First condition is used to get only non empty Query names
+Second COndition is for the queries coming specifically from 18.217.1.57
+-o of grep only returns the substring which was searched for
+^[^.]*" returns all the strings till the . appears 0 or many times beacuse of *

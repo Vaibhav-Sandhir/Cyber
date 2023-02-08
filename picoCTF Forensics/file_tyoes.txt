@@ -1,0 +1,9 @@
+After using hexedit on the Flag file you can see it is not a pdf file it is a shell script written with sharutils.
+So execute the shell script
+CMD: sh Flag.pdf
+
+Then files are compressed using different types the commands for the following are:
+lzma flag 
+lunzip flag
+gzip -d flag.gz 
+And LZO file I could not find command so manually extract

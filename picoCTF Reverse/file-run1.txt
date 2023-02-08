@@ -1,0 +1,3 @@
+Simple commands used:
+chmod u+x run  
+./run

@@ -1,0 +1,5 @@
+CMD: strings drawing.flag.svg
+We can see the flag is fragmented throughout this file
+to close the gap of spaces we use 
+CMD: strings drawing.flag.svg | grep tspan
+And then we can manually read the  flag

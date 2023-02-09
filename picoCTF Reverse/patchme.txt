@@ -1,0 +1,2 @@
+After looking at the source code of patchme.py we can see that if we enter the password ak98-=90adfjhgj321sleuth9000
+it will decrypt the flag for us.

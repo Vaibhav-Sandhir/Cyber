@@ -1,0 +1,3 @@
+The file is not a text file. 
+CMD: file flag.tex
+Tells us that it is actually a png image so rename the extensin and open the image

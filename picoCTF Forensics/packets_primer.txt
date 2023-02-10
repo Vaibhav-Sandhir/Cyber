@@ -1,0 +1,2 @@
+Open the file in wireshark.
+Statitics -> Protocol Hieararchy -> Follow Data Stream -> Flag is Present

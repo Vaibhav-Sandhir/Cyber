@@ -1,0 +1,4 @@
+From the source code we can see the encoded version of the flag is pl3as3_l3t_m3_1nt0_th3_saf3.
+And at the beginning of the code we can see Base64 was imported therefore the same will be used for decoding.
+
+cat SafeOpener.java | grep -oE cGwzYXMzX2wzdF9tM18xbnQwX3RoM19zYWYz | base64 -d

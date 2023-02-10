@@ -1,0 +1,2 @@
+CMD: mmls disk.img  //To know size of the linux partition
+Then access the server and enter the password which is the above mentioned size.

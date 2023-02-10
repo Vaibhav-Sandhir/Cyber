@@ -1,0 +1,2 @@
+The hint is to find the metadat of the image
+CMD: exiftool pico_img.png 

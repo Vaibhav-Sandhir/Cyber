@@ -1,0 +1,3 @@
+The hint was to search for strings so after extracting the image 
+
+CMD: string .img | grep -E "picoCTF"

@@ -1,0 +1,3 @@
+As the question mentions an old cipher and you can see there is a date of 1508 written in the cipher text
+so we can conclude the cipher is a Vigenere Cipher.
+The website https://www.guballa.de/vigenere-solver is very good to brute force.

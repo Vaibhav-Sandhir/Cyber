@@ -1,0 +1,3 @@
+ Use a certificate website decoder https://redkestrel.co.uk/products/decoder/
+ after decoding we can see the modulus which is not that big which mean it can be factorized easily
+ to obtain p and q from website http://factordb.com/

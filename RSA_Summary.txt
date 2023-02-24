@@ -32,4 +32,40 @@ EULER TOTIENT FUNCTION:
   iii.) Fi(p^e) = p^e-1 * (p -1) where p is a prime number and e >= 1
   iv.) a^Fi(n) = 1*(mod n) where a is an int such that gcd(a,n) = 1
   
+RSA CRYPTOSYSTEM:
+  1.) Key Generations:
+       I/P -- Integer k for number of bits
+       O/P -- (N,e) and (N.d)
+       
+       i.) Pick random primes p and q of bit size k
+       ii.) N = p*q, Fi(n) = (p-1)*(q-1)
+       iii.) while( gcd(e,Fi(N) != 1)
+                Pick a random int e < Fi(N)
+       iv.) d = e^-1 (Mod Fi(N))
+       v.) Return (N,e) and (N,d)
+  
+  2.) Encryption:
+       i.) Represent message as an int m < N such that gcd(m,N) = 1
+       ii.) c = m^e(mod N)
+       iii.) Return c
+       
+  3.) Decryption:
+       i.) m = c^e(mod N)
+       ii.) return m
+       
+  4.) Signature:
+       I/P -- (Na,ea) and (Nb,db) and m  
+       O/P -- c and S
+       
+       i.) c = m^ea (mod Na)
+       ii.) S = c^db (mod Nb)
+       iii.) Return c and S
+      
+  5.) Signature Verifiction:
+       I/P -- (Na,da) and (Nb,eb) and c and S
+       
+       i.) S' = S^eb (mod Nb)
+       ii.) Verified if S' = c
+        
+        
   

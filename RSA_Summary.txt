@@ -1,0 +1,35 @@
+THE MATHEMATICAL CRYPTOGRAPHY OF THE RSA CRYPTOSYSTEM
+AUTHOR: Abderrahmane Nitaj
+        Laboratoire de Math´ematiques Nicolas Oresme
+        Universit´e de Caen, France
+        
+INTRODUCTION:
+  Underlying security is multiplying two large prime numbers is easy but factorising the result is very hard
+  
+TERMS:  
+  p and q are two prime numbers of equal bits
+  N = pq (Public Modulus)
+  m = plaintext c = cyphertext
+  e = public exponent d = private exponent
+  Fi(N) = (p -1)(q -1) (Euler Totient F'n)
+  c = m^e (mod N)
+  e*d = 1 (mod Fi(N))
+  (N,e) Public key, (N,d) Private key
+  
+MATH DEFINATIONS USED:
+  i.) Divison Algorithim: For two numbers a and b -- a = b*q + r
+                          if r = 0 then b divides a b|a
+  ii.) GCD: d is gcd of a and b if
+       d|a and d|b
+       if c|a and c|b then c|d
+  iii.) Prime integer: An integer p is said to be prime if it has only two divisors 1 and p
+  iv.) Relatively prime: a and b are coprime if GCD(a,b) = 1
+  v.) RSA Modulus: p * q
+  
+EULER TOTIENT FUNCTION:
+  i.) Fi(p) = p - 1 wher p is a prime number
+  ii.) Fi(mn) = Fi(m) * Fi(n) where m and n are co-prime
+  iii.) Fi(p^e) = p^e-1 * (p -1) where p is a prime number and e >= 1
+  iv.) a^Fi(n) = 1*(mod n) where a is an int such that gcd(a,n) = 1
+  
+  

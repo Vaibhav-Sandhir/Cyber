@@ -1,0 +1,48 @@
+ELLIPTIC CURVE CRYPTOGRAPHY AND ITS APPLICATIONS
+DOI: 10.1109/WOSSPA.2011.5931464
+
+INTRO:
+  It is a public key cryptosystem. It is supposed to be faster and more secure than RSA. Scalar multiplication is used.
+  y^2 = x^3 + a*x + b
+
+MATH DEFINATIONS USED:
+  1.) Group(G,+) --
+    i.) Associativity : (a + b) + c = a + (b +c)
+    ii.) Identity: 0 + a = a + 0
+    iii.) Inverse: (-a) + a = 0
+    
+  2.) Field(F,+,*) --
+    i.) (F,+) is an albenian group (normal group + commutative) with identity 0.
+    ii.) (*) is associative
+    iii.) Inverse: a * a^-1 = 1
+    iv.) Identity: a * 1 = 1 * a
+    v.) Commutative: a * b = b * a
+    vi.) Distributive : a * (b + c) = (a*b) + (a*c)
+    When the field has finite set of elements it is called a finite field (Galois Field)
+    
+CURVE ADDITION:
+  P(x1,y1), Q(x2,y2) and R(x3,y3) are points on the elliptic curve where R = P + Q
+  i.) P = Q
+    Draw a tangent and the tangent will intersect the curve at point (x3,-y3) from which we can find R
+    x3 = L^2 + L + a
+    y3 = x1^2 + (L + 1)x3
+    L = x1 + y1/x1
+  ii.) P != Q
+    Draw a line passing through P and Q which will cut the curve again at (x3,-y3) from which we can find R
+    x3 = L^2 + L + x1 + x2 + a
+    y3 = L(x1 + x3) + x3 + y1
+    L = (y2 + y1) / (x2 + x1)
+    
+BINARY METHOD:
+  It is the most easy and straightforward implementation of the ECC. Algorithim scans every bit of scalar k and depending on its value it performs
+  ECC-Double when k = 0
+  ECC-Double and ECC-Add when k = 1
+  
+DIFFE HELLMAN:
+  i.) A and B each chose random private key Ka and Kb
+  ii.) A and B each calculate Ka*P, Kb*P and send them to opposite side.
+  iii.) A and B both compute the shared secret Q = Ka(Kb*P) = Kb(Ka*P)
+  
+  
+    
+    
